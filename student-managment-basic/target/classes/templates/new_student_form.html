@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+
+	<style>
+		body {
+			background-color: lightblue;
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+	<h1> new Student form </h1>
+
+	<form action="#" th:action="@{/add}" th:object="${student}" method="post">
+
+		<table>
+
+			<tr>
+				<td>Student Name:</td>
+				<td><input type="text" th:field="*{name}" /> </td>
+			</tr>
+
+			<tr>
+				<td>Student Gender:</td>
+				<td><input type="text" th:field="*{gender}" /> </td>
+			</tr>
+
+			<tr>
+				<td>Student Subject:</td>
+				<td><input type="text" th:field="*{subject}" /> </td>
+			</tr>
+
+
+			<tr>
+				<td>Student Age:</td>
+				<td><input type="number" th:field="*{age}" /> </td>
+			</tr>
+
+			<!-- button logic-->
+			<tr colspan="2"> <button type="submit">Save</button> </tr>
+		</table>
+
+
+	</form>
+
+</body>
+
+</html>

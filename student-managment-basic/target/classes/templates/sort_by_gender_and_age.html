@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+
+	<style>
+		body {
+			background-color: lightblue;
+		}
+
+
+		.button-container form,
+		.button-container form div {
+			display: inline;
+		}
+
+		.button-container button {
+			display: inline;
+			vertical-align: middle;
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+	<div align="center">
+		<h1> List sorted by Gender and Age </h1>
+	</div>
+
+	<table align="center" border="1" cellpadding="10">
+		<thead>
+			<tr>
+				<td>ID</td>
+				<td>Student Name</td>
+				<td>Student Gender</td>
+				<td>Student Subject</td>
+				<td>Student Age</td>
+			</tr>
+		</thead>
+
+		<tbody>
+			<!-- loop through data like java loop-->
+			<tr th:each="student : ${studentlist}">
+				<td th:text="${student.id}">Id</td>
+				<td th:text="${student.name}">Student Name</td>
+				<td th:text="${student.gender}">Student Gender</td>
+				<td th:text="${student.subject}">Student Subject</td>
+				<td th:text="${student.age}">Student Age</td>
+
+			</tr>
+		</tbody>
+
+	</table>
+
+
+</body>
+
+</html>
